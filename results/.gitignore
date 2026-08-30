@@ -1,0 +1,19 @@
+# Dataset
+chest_xray/
+dataset/
+
+# Trained models
+*.keras
+*.h5
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
