@@ -1,17 +1,11 @@
 # Computer Vision for Pneumonia Detection
-
-A Grade 11 computer vision project that uses deep learning to classify chest X-ray images as **NORMAL** or **PNEUMONIA**.
-
-> **Educational project:** This model is not intended to diagnose patients or replace healthcare professionals.
-
-## Overview
+A project that uses deep learning to classify chest X-ray images as **normal** or **pneumonia**.
 
 The goal of this project was to explore how computer vision and artificial intelligence can be applied to medical image classification.
 
-The model receives a chest X-ray image and predicts whether it belongs to the NORMAL or PNEUMONIA category.
+The model receives a chest X-ray image and predicts whether it belongs to the normal or pneumonia category.
 
 ## Project Workflow
-
 ```text
 Chest X-ray
      ↓
@@ -23,11 +17,10 @@ Binary Classification
      ↓
 NORMAL / PNEUMONIA
      ↓
-Performance Evaluation
+Evaluation
 ```
 
 ## Dataset
-
 The project uses the public Chest X-Ray Images (Pneumonia) dataset.
 
 Final experiment:
@@ -36,12 +29,11 @@ Final experiment:
 * Validation images: 1,044
 * Test images: 624
 * Image size: 224 × 224 pixels
-* Classes: NORMAL and PNEUMONIA
+* Classes: normal and pneumonia
 
-The dataset is not included in this repository.
+The dataset is not included.
 
 ## Model
-
 I used **MobileNetV2** with pretrained ImageNet weights.
 
 The pretrained convolutional base was frozen and a classification layer was added.
@@ -63,13 +55,11 @@ Total parameters: **2,259,265**
 Trainable parameters: **1,281**
 
 ## Preprocessing
-
 Images were resized to 224 × 224 pixels and pixel values were normalized.
 
 Training data was augmented using techniques such as rotation, zoom, shifting, and horizontal flipping.
 
 ## Training
-
 The model was trained for 8 epochs.
 
 The best model was selected based on validation loss.
@@ -79,11 +69,9 @@ Best validation loss: **0.2924**
 Best validation accuracy: **88.31%**
 
 ## Test Results
-
-The final model was evaluated on 624 previously unseen test images.
+The final model was evaluated on 624 unseen test images.
 
 ### Overall Performance
-
 **Test Accuracy: 87.02%**
 
 | Class     | Precision | Recall | F1-Score |
@@ -93,7 +81,6 @@ The final model was evaluated on 624 previously unseen test images.
 | Overall   |       87% |    87% |      87% |
 
 ### Confusion Matrix
-
 ```text
                     Predicted
                  NORMAL  PNEUMONIA
@@ -127,44 +114,14 @@ It incorrectly classified:
 ![Confusion Matrix](results/confusion_matrix.png)
 
 ## Limitations
-
-This project has important limitations:
-
 * The dataset is limited compared with datasets used in clinical systems.
 * The classes are not perfectly balanced.
 * X-ray images can vary because of equipment, positioning, and image quality.
 * A model trained on one dataset may not generalize to other hospitals or populations.
 * The model has not been clinically validated.
 * Prediction confidence should not be interpreted as medical certainty.
-
-## Ethical Considerations
-
-AI in healthcare must be developed and used responsibly.
-
-Important considerations include:
-
-* Patient privacy
-* Dataset bias
-* Representation of different populations
-* False positives and false negatives
-* Human oversight
-* Responsible interpretation of predictions
-
-This project demonstrates machine-learning concepts and is not a medical diagnostic system.
-
-## Future Improvements
-
-Possible improvements include:
-
-* Fine-tuning MobileNetV2
-* Comparing MobileNetV2 with ResNet or EfficientNet
-* Using a larger and more diverse dataset
-* Implementing Grad-CAM visualizations
-* Testing the model on an independent dataset
-* Improving probability calibration
-
+  
 ## Technologies
-
 * Python
 * TensorFlow / Keras
 * MobileNetV2
@@ -177,7 +134,6 @@ Possible improvements include:
 * GitHub
 
 ## Project Structure
-
 ```text
 Pneumonia-AI/
 │
@@ -194,5 +150,4 @@ Pneumonia-AI/
 ```
 
 ## Disclaimer
-
-This project is an educational demonstration of computer vision and deep learning. It must not be used for medical diagnosis, treatment decisions, or clinical decision-making.
+This project is an educational demonstration.
